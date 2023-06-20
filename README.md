@@ -6,3 +6,5 @@ Every dependencies are added to package.json, just need to do npm install in you
 Note 2:
 Node modules folder is not added install using npm install
 
+Note 3:
+        qwertyui
