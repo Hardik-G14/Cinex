@@ -12,6 +12,8 @@ import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
+import SignUpForm from './pages/RegisterLogin/SignUpForm';
+import LoginForm from "./pages/RegisterLogin/LoginForm";
 
 function App() {
   const { url } = useSelector((state) => state.home);
@@ -56,6 +58,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<SignUpForm />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
