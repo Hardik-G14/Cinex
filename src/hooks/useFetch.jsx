@@ -6,19 +6,34 @@ const useFetch = (url) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        setLoading("loading...");
-        setData(null);
-        setError(null);
-
-        fetchDataFromApi(url)
-            .then((res) => {
-                setLoading(false);
+        const fetchData = async(url) =>{
+            setLoading("Loading...");
+            setData(null);
+            setError(null);
+            try{
+                const res = await fetchDataFromApi(url);
+                console.log(res);
                 setData(res);
-            })
-            .catch((err) => {
-                setLoading(false);
+            }catch(err){
                 setError("Something went wrong!");
-            });
+            }
+            setLoading(false);
+        };
+
+        fetchData(url);
+        // setLoading("loading...");
+        // setData(null);
+        // setError(null);
+
+        // fetchDataFromApi(url)
+        //     .then((res) => {
+        //         setLoading(false);
+        //         setData(res);
+        //     })
+        //     .catch((err) => {
+        //         setLoading(false);
+        //         setError("Something went wrong!");
+        //     });
     }, [url]);
 
     return { data, loading, error };
