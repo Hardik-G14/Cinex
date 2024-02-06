@@ -33,10 +33,18 @@
 
     .logo {
         cursor: pointer;
-
-        img {
-            height: 50px;
+        display: flex;
+        font-size: 32px;
+        // width:100px;
+        color: orangered;
+        // background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+        
+        h1{
+            color:white;
         }
+        // img {
+        //     height: 50px;
+        // }
     }
 
     .menuItems {

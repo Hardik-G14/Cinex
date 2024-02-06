@@ -3,6 +3,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
+import { MdLocalMovies } from "react-icons/md";
 
 import "./Header.scss";
 
@@ -75,7 +76,10 @@ const Header = () => {
 
             <ContentWrapper>
                 <div className="logo" onClick={() => { navigate('/') }}>
-                    <img src={logo} alt="logo" />
+                    {/* <img src={logo} alt="logo" /> */}
+                    <MdLocalMovies/>
+                    <h1>CineX</h1>
+                    {/* <h1>Cinex</h1> */}
                 </div>
                 <ul className="menuItems">
                     <li className="menuItem" onClick={() => {
